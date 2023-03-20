@@ -1,0 +1,15 @@
+name: 'bump'
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *' # 12pm, daily
+
+jobs:
+  bump:
+    uses: 'azurystudio/bump/.github/workflows/bump.yml@v0'
+    with:
+      assignees: 'unvented'
+      reviewers: 'unvented'
+    secrets:
+      token: '${{ secrets.GITHUB_TOKEN }}'
