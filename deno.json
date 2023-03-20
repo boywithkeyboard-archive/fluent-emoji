@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "deno.worker"
+    ]
+  },
+  "fmt": {
+    "options": {
+      "semiColons": false,
+      "singleQuote": true
+    }
+  },
+  "tasks": {
+    "build": "deno run -A .github/build.ts",
+    "generate": "deno run -A .github/generate.ts",
+    "publish": "deno task generate && deno task build && npm publish"
+  }
+}
