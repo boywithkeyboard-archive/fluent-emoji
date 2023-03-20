@@ -14,7 +14,7 @@ self.onmessage = async ({ data }) => {
       .join('')
 
     let response = await fetch(
-      `https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/${
+      `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${
         encodeURIComponent(path)
       }/3D/${
         (path === 'O button blood type' ? 'o_button_(blood_type)' : path)
@@ -24,32 +24,10 @@ self.onmessage = async ({ data }) => {
 
     if (response.status === 404) {
       response = await fetch(
-        `https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/${
+        `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${
           encodeURIComponent(path)
         }/Default/3D/${path.replaceAll(' ', '_').toLowerCase()}_3d_default.png`,
       )
-    }
-
-    // fallback to bypass rate limit
-    if (!response.ok) {
-      let response = await fetch(
-        `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${
-          encodeURIComponent(path)
-        }/3D/${
-          (path === 'O button blood type' ? 'o_button_(blood_type)' : path)
-            .replaceAll(' ', '_').toLowerCase()
-        }_3d.png`,
-      )
-
-      if (response.status === 404) {
-        response = await fetch(
-          `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${
-            encodeURIComponent(path)
-          }/Default/3D/${
-            path.replaceAll(' ', '_').toLowerCase()
-          }_3d_default.png`,
-        )
-      }
     }
 
     Deno.writeFile(
