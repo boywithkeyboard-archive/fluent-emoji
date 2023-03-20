@@ -1,0 +1,34 @@
+name: 'publish'
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - uses: 'actions/checkout@v3'
+
+      - name: 'grab version'
+        run: echo "VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      
+      - name: 'publish release'
+        uses: 'actions/github-script@v6'
+        with:
+          script: |
+            const year = new Date().getUTCFullYear()
+            , month = new Date().getUTCMonth() + 1
+            , day = new Date().getUTCDate()
+
+            github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: process.env.VERSION,
+              name: process.env.VERSION,
+              body: `### ${process.env.VERSION} / ${year}.${month < 10 ? `0${month}` : month}.${day < 10 ? `0${day}` : day}`,
+              draft: false,
+              prerelease: false
+            })
