@@ -1,0 +1,32 @@
+name: 'update'
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 5' # 12am on friday, weekly
+
+jobs:
+  update:
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - uses: 'actions/checkout@v3'
+
+      - uses: 'denoland/setup-deno@v1'
+        with:
+          deno-version: 'v1.x'
+
+      - name: 'update emojis'
+        run: deno task generate
+
+      - name: 'create pull request'
+        uses: 'peter-evans/create-pull-request@v4'
+        with:
+          assignees: 'unvented'
+          reviewers: 'unvented'
+          token: '${{ secrets.GITHUB_TOKEN }}'
+          title: 'refactor: update emojis'
+          author: 'GitHub <noreply@github.com>'
+          commit-message: 'refactor: update emojis'
+          delete-branch: true
+          branch: 'update'
