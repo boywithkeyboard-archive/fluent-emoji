@@ -5,7 +5,7 @@ import { getEmojis } from './getEmojis.ts'
 let imports = ''
 let types = `import * as React from 'react'\n\n`
 const exports = []
-let components = await Deno.readTextFile('./createComponent.jsx') + '\n\n'
+let components = await Deno.readTextFile('./createComponent.txt') + '\n\n'
 
 await ensureDir('cache')
 
