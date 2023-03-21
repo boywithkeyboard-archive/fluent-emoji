@@ -4,6 +4,15 @@
   "description": "A React library for Microsoft's Fluent Emoji.",
   "author": "Samuel Kopp (https://samuelkopp.de)",
   "license": "Apache-2.0",
+  "keywords": [
+    "front-end",
+    "emojis",
+    "fluentui-emoji",
+    "typescript",
+    "javascript",
+    "react",
+    "svg"
+  ],
   "main": "index.js",
   "exports": "./index.js",
   "types": "index.d.ts",
