@@ -1,6 +1,6 @@
 {
   "name": "fluent-emoji",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React library for Microsoft's Fluent Emoji.",
   "author": "Samuel Kopp (https://samuelkopp.de)",
   "license": "Apache-2.0",
