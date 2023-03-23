@@ -1,5 +1,8 @@
 ## fluent-emoji
 
+> A React library for Microsoft's
+> [Fluent Emoji](https://github.com/microsoft/fluentui-emoji).
+
 #### Setup
 
 ```bash
