@@ -1,4 +1,4 @@
-import { ensureDir } from 'https://deno.land/std@v0.180.0/fs/ensure_dir.ts'
+import { ensureDir } from 'https://deno.land/std@v0.181.0/fs/ensure_dir.ts'
 import { build, stop } from 'https://deno.land/x/esbuild@v0.17.12/mod.js'
 import { getEmojis } from './getEmojis.ts'
 
