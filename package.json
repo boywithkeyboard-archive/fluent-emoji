@@ -20,9 +20,9 @@
     "index.js",
     "index.d.ts"
   ],
-  "repository": "azurystudio/fluent-emoji",
-  "bugs": "https://github.com/azurystudio/fluent-emoji/issues",
-  "homepage": "https://github.com/azurystudio/fluent-emoji#readme",
+  "repository": "boywithkeyboard/fluent-emoji",
+  "bugs": "https://github.com/boywithkeyboard/fluent-emoji/issues",
+  "homepage": "https://github.com/boywithkeyboard/fluent-emoji#readme",
   "peerDependencies": {
     "react": "^18"
   },

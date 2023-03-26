@@ -22,8 +22,7 @@ jobs:
       - name: 'create pull request'
         uses: 'peter-evans/create-pull-request@v4'
         with:
-          assignees: 'unvented'
-          reviewers: 'unvented'
+          reviewers: 'boywithkeyboard'
           token: '${{ secrets.GITHUB_TOKEN }}'
           title: 'refactor: update emojis'
           author: 'GitHub <noreply@github.com>'
