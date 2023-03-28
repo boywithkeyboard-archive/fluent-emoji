@@ -1,6 +1,6 @@
 import { gray, white } from 'https://deno.land/std@v0.181.0/fmt/colors.ts'
 import { ensureDir } from 'https://deno.land/std@v0.181.0/fs/ensure_dir.ts'
-import { log } from 'https://deno.land/x/drgn@v0.10.1/mod.ts'
+import { log } from 'https://deno.land/x/drgn@v0.10.2/mod.ts'
 import { getEmojis } from './getEmojis.ts'
 
 await ensureDir('./emojis')
