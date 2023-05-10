@@ -17,7 +17,7 @@ jobs:
           deno-version: 'v1.x'
 
       - name: 'update emojis'
-        run: deno task generate
+        run: deno task download
 
       - name: 'create pull request'
         uses: 'peter-evans/create-pull-request@v4'

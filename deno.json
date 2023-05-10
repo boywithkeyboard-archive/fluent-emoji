@@ -12,7 +12,7 @@
   },
   "tasks": {
     "build": "deno run -A build.ts",
-    "generate": "deno run -A generate.ts",
-    "publish": "deno task generate && deno task build && npm publish"
+    "download": "deno run -A download.ts",
+    "publish": "deno task build && npm publish"
   }
 }
