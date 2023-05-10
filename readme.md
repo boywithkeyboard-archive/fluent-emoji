@@ -1,15 +1,12 @@
 ## fluent-emoji
 
-> A React library for Microsoft's
-> [Fluent Emoji](https://github.com/microsoft/fluentui-emoji).
-
-#### Setup
+### Setup
 
 ```bash
 npm i fluent-emoji
 ```
 
-#### Usage
+### Usage
 
 ```tsx
 import { WhiteFlag } from 'fluent-emoji'
@@ -18,3 +15,19 @@ export function App() {
   return <WhiteFlag />
 }
 ```
+
+### Building
+
+> **Note**: Deno 1.30 or later is required.
+
+1. **Download Emoji Files**
+
+    ```bash
+    deno task download
+    ```
+
+2. **Create JavaScript Bundle**
+
+    ```bash
+    deno task build
+    ```
