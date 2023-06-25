@@ -1,5 +1,5 @@
-import { ensureDir } from 'https://deno.land/std@v0.186.0/fs/ensure_dir.ts'
-import { build, stop } from 'https://deno.land/x/esbuild@v0.17.18/mod.js'
+import { ensureDir } from 'https://deno.land/std@0.192.0/fs/ensure_dir.ts'
+import { build, stop } from 'https://deno.land/x/esbuild@v0.18.8/mod.js'
 import { getEmojis } from './getEmojis.ts'
 
 let imports = ''
